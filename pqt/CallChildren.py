@@ -11,13 +11,16 @@ from children2 import Ui_childrenForm2
 class MainWindow(QMainWindow, Ui_ChildrenForm):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
+        self.child = ChildrenForm()  # 创建一个新类
         self.setupUi(self)
         # event
         self.fileCloseAction.triggered.connect(self.close)
         self.fileOpenAction.triggered.connect(self.openMsg)
 
+        self.addWinAction.triggered.connect(self.childShow)
+
+    def childShow(self):
         # children
-        self.child = ChildrenForm()  # 创建一个新类
         self.MaingridLayout.addWidget(self.child)  # 将组件添加到LayOut布局
         self.child.show()
 
