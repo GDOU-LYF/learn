@@ -7,3 +7,9 @@ for i in range(10000,1000000):
             sum+=int(i2)
         if sum==n:
             print(i)
+
+##
+# num = int(input())
+# for i in range(10000,1000000):
+#     if str(i) == str(i)[::-1] and sum(list(map(int,list(str(i))))) == num:
+#         print(i)
